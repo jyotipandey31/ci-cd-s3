@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
+    "deploy": "aws s3 sync out/ s3://task1-futuralis-jyoti",
+    "prod": "npm run build && npm run deploy",
     "start": "next start",
     "lint": "next lint"
   },
